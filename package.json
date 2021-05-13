@@ -1,0 +1,30 @@
+{
+  "name": "ongoua-pvit",
+  "version": "1.0.0",
+  "description": "A npm package for use PVit payment gateway",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "dev": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mendoc/ongoua-pvit.git"
+  },
+  "keywords": [
+    "pvit",
+    "node",
+    "ongoua",
+    "npm"
+  ],
+  "author": "Dimitri ONGOUA <ongouadimitri5@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mendoc/ongoua-pvit/issues"
+  },
+  "homepage": "https://github.com/mendoc/ongoua-pvit#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "xml2json": "^0.12.0"
+  }
+}
