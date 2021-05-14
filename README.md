@@ -40,6 +40,8 @@ clientPvit.send().then((response) => {
 ```
 ### In your PVit callback
 ```js
+const { OngouaPvit } = require("ongoua-pvit");
+
 // xmlPVit contains XML response provided by PVit
 const data = OngouaPvit.parse(xmlPVit)
 
