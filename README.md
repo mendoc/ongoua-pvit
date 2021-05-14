@@ -12,7 +12,8 @@ Using yarn:
 ```shell
 $ yarn add ongoua-pvit
 ```
-## Example
+## Examples
+### Submitting request
 ```js
 const { OngouaPvit } = require("ongoua-pvit");
 
@@ -37,5 +38,18 @@ clientPvit.send().then((response) => {
     console.log(error);
 });
 ```
+### In your PVit callback
+```js
+// xmlPVit contains XML response provided by PVit
+const data = OngouaPvit.parse(xmlPVit)
+
+if (data) {
+    // Do something with data
+    console.log(data.statut);
+    console.log(data.message);
+    console.log(data.token);
+}
+```
+
 ## Report bug
 DM me on Twitter [@DimitriONGOUA](https://twitter.com/DimitriOngoua)

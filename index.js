@@ -60,12 +60,22 @@ exports.OngouaPvit = class OngouaPvit {
         return (number && number.length === 9 && (/(0){1}([6-7]){1}([0-9]){7}/).test(number));
     }
 
-    lowerKeys(obj) {
+    static lowerKeys(obj) {
         const keyValues = Object.keys(obj).map(key => {
             const newKey = key.toLowerCase();
             return { [newKey]: obj[key] };
         });
         return Object.assign({}, ...keyValues);
+    }
+
+    static parse(xmlPvit) {
+        try {
+            const resPvit = parser.toJson(xmlPvit, { object: true });
+            return this.lowerKeys(resPvit.REPONSE);
+        } catch (e) {
+            console.log(e);
+            return null;
+        }
     }
 
     send() {
