@@ -23,7 +23,7 @@ const TOKEN        = process.env.TOKEN;
 const clientPvit = new OngouaPvit(TEL_MARCHAND, TOKEN);
 
 clientPvit.tel_client   = "074567890";
-clientPvit.montant      = 2000;
+clientPvit.montant      = 100;
 clientPvit.ref          = "PROD2X3T8";
 
 clientPvit.send().then((response) => {
@@ -49,7 +49,7 @@ if (data) {
     // Do something with data
     console.log(data.statut);
     console.log(data.message);
-    console.log(data.token);
+    console.log(data.ref);
 }
 ```
 
